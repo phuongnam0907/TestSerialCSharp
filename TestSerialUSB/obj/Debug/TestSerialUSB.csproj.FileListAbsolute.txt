@@ -1,0 +1,18 @@
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\bin\Debug\TestSerialUSB.exe.config
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\bin\Debug\TestSerialUSB.exe
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\bin\Debug\TestSerialUSB.pdb
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.Form1.resources
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.Properties.Resources.resources
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.exe
+c:\users\user\documents\visual studio 2015\Projects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.pdb
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\bin\Debug\TestSerialUSB.exe.config
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.exe
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.pdb
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\bin\Debug\TestSerialUSB.exe
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\bin\Debug\TestSerialUSB.pdb
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.csprojResolveAssemblyReference.cache
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.Form1.resources
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.Properties.Resources.resources
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.csproj.GenerateResource.Cache
