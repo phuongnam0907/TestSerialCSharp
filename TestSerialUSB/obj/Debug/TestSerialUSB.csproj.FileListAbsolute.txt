@@ -16,3 +16,12 @@ C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.
 C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.Form1.resources
 C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.Properties.Resources.resources
 C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Debug\TestSerialUSB.csproj.GenerateResource.Cache
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\bin\Debug\TestSerialUSB.exe.config
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\obj\Debug\TestSerialUSB.exe
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\obj\Debug\TestSerialUSB.pdb
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\bin\Debug\TestSerialUSB.exe
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\bin\Debug\TestSerialUSB.pdb
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\obj\Debug\TestSerialUSB.csprojResolveAssemblyReference.cache
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\obj\Debug\TestSerialUSB.Form1.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\obj\Debug\TestSerialUSB.Properties.Resources.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\TestSerialCSharp\TestSerialUSB\obj\Debug\TestSerialUSB.csproj.GenerateResource.Cache
