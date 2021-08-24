@@ -1,0 +1,8 @@
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\bin\Release\TestSerialUSB.exe.config
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\bin\Release\TestSerialUSB.exe
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\bin\Release\TestSerialUSB.pdb
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Release\TestSerialUSB.Form1.resources
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Release\TestSerialUSB.Properties.Resources.resources
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Release\TestSerialUSB.csproj.GenerateResource.Cache
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Release\TestSerialUSB.exe
+C:\Nam\VisualStudioProjects\TestSerialUSB\TestSerialUSB\obj\Release\TestSerialUSB.pdb

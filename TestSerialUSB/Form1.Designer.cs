@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.data = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnKeo = new System.Windows.Forms.Button();
             this.btnBe = new System.Windows.Forms.Button();
@@ -48,8 +50,8 @@
             this.btnNhan = new System.Windows.Forms.Button();
             this.numK = new System.Windows.Forms.NumericUpDown();
             this.numB = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.data = new System.Windows.Forms.Label();
+            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.buttonAuto = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numK)).BeginInit();
@@ -149,15 +151,34 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonAuto);
             this.groupBox1.Controls.Add(this.data);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Location = new System.Drawing.Point(31, 226);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(498, 117);
+            this.groupBox1.Size = new System.Drawing.Size(535, 117);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control Table";
+            // 
+            // data
+            // 
+            this.data.AutoSize = true;
+            this.data.Location = new System.Drawing.Point(49, 97);
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(0, 13);
+            this.data.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 14);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Data:";
             // 
             // tableLayoutPanel1
             // 
@@ -182,14 +203,14 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(479, 74);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(440, 74);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnKeo
             // 
             this.btnKeo.Location = new System.Drawing.Point(3, 40);
             this.btnKeo.Name = "btnKeo";
-            this.btnKeo.Size = new System.Drawing.Size(89, 31);
+            this.btnKeo.Size = new System.Drawing.Size(82, 31);
             this.btnKeo.TabIndex = 0;
             this.btnKeo.Text = "KÉO";
             this.btnKeo.UseVisualStyleBackColor = true;
@@ -197,9 +218,9 @@
             // 
             // btnBe
             // 
-            this.btnBe.Location = new System.Drawing.Point(193, 40);
+            this.btnBe.Location = new System.Drawing.Point(179, 40);
             this.btnBe.Name = "btnBe";
-            this.btnBe.Size = new System.Drawing.Size(89, 31);
+            this.btnBe.Size = new System.Drawing.Size(82, 31);
             this.btnBe.TabIndex = 1;
             this.btnBe.Text = "BẺ";
             this.btnBe.UseVisualStyleBackColor = true;
@@ -207,9 +228,9 @@
             // 
             // btnCat
             // 
-            this.btnCat.Location = new System.Drawing.Point(383, 3);
+            this.btnCat.Location = new System.Drawing.Point(355, 3);
             this.btnCat.Name = "btnCat";
-            this.btnCat.Size = new System.Drawing.Size(93, 31);
+            this.btnCat.Size = new System.Drawing.Size(82, 31);
             this.btnCat.TabIndex = 2;
             this.btnCat.Text = "CẮT";
             this.btnCat.UseVisualStyleBackColor = true;
@@ -217,9 +238,9 @@
             // 
             // btnNhan
             // 
-            this.btnNhan.Location = new System.Drawing.Point(383, 40);
+            this.btnNhan.Location = new System.Drawing.Point(355, 40);
             this.btnNhan.Name = "btnNhan";
-            this.btnNhan.Size = new System.Drawing.Size(93, 31);
+            this.btnNhan.Size = new System.Drawing.Size(82, 31);
             this.btnNhan.TabIndex = 3;
             this.btnNhan.Text = "NHẤN";
             this.btnNhan.UseVisualStyleBackColor = true;
@@ -240,7 +261,7 @@
             0,
             -2147483648});
             this.numK.Name = "numK";
-            this.numK.Size = new System.Drawing.Size(89, 30);
+            this.numK.Size = new System.Drawing.Size(82, 30);
             this.numK.TabIndex = 6;
             this.numK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numK.ThousandsSeparator = true;
@@ -248,7 +269,7 @@
             // numB
             // 
             this.numB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numB.Location = new System.Drawing.Point(193, 3);
+            this.numB.Location = new System.Drawing.Point(179, 3);
             this.numB.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -260,33 +281,36 @@
             0,
             -2147483648});
             this.numB.Name = "numB";
-            this.numB.Size = new System.Drawing.Size(89, 30);
+            this.numB.Size = new System.Drawing.Size(82, 30);
             this.numB.TabIndex = 7;
             this.numB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label4
+            // buttonRefresh
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 14);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Data:";
+            this.buttonRefresh.Location = new System.Drawing.Point(491, 10);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
+            this.buttonRefresh.TabIndex = 11;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // data
+            // buttonAuto
             // 
-            this.data.AutoSize = true;
-            this.data.Location = new System.Drawing.Point(49, 97);
-            this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(0, 13);
-            this.data.TabIndex = 2;
+            this.buttonAuto.Location = new System.Drawing.Point(459, 19);
+            this.buttonAuto.Name = "buttonAuto";
+            this.buttonAuto.Size = new System.Drawing.Size(75, 74);
+            this.buttonAuto.TabIndex = 3;
+            this.buttonAuto.Text = "AUTO\r\nOFF\r\n";
+            this.buttonAuto.UseVisualStyleBackColor = true;
+            this.buttonAuto.Click += new System.EventHandler(this.buttonAuto_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 355);
+            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -335,6 +359,8 @@
         private System.Windows.Forms.NumericUpDown numB;
         private System.Windows.Forms.Label data;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Button buttonAuto;
     }
 }
 

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,21 +14,32 @@ namespace TestSerialUSB
 {
     public partial class Form1 : Form
     {
+        private Thread sendDataThread;
+        private int count = 0;
+
         public Form1()
         {
             InitializeComponent();
+
+            ThreadStart thread = new ThreadStart(sendData);
+            sendDataThread = new Thread(thread);
+            sendDataThread.Start();
         }
+
+        private bool isAuto = false;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] ports = SerialPort.GetPortNames();
             cbPorts.Items.AddRange(ports);
-            cbPorts.SelectedIndex = 0;
+            if (ports.Count() > 0) cbPorts.SelectedIndex = 0;
+            else cbPorts.SelectedIndex = -1;
             btnClose.Enabled = false;
             btnKeo.Enabled = false;
             btnBe.Enabled = false;
             btnCat.Enabled = false;
-            btnKeo.Enabled = false;
+            btnNhan.Enabled = false;
+            buttonAuto.Enabled = false;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -37,7 +49,8 @@ namespace TestSerialUSB
             btnKeo.Enabled = true;
             btnBe.Enabled = true;
             btnCat.Enabled = true;
-            btnKeo.Enabled = true;
+            btnNhan.Enabled = true;
+            buttonAuto.Enabled = true;
 
             try
             {
@@ -70,6 +83,7 @@ namespace TestSerialUSB
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Close();
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -176,6 +190,54 @@ namespace TestSerialUSB
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames();
+            cbPorts.Items.Clear();
+            cbPorts.Items.AddRange(ports);
+            if (ports.Count() > 0)
+            {
+                cbPorts.SelectedIndex = 0;
+                cbPorts.Text = "";
+            }
+            else cbPorts.SelectedIndex = -1;
+        }
+
+        private void buttonAuto_Click(object sender, EventArgs e)
+        {
+            if (isAuto)
+            {
+                buttonAuto.Text = "AUTO\nOFF";
+            }
+            else
+            {
+                buttonAuto.Text = "AUTO\nON";
+            }
+            isAuto = !isAuto;
+        }
+
+        private void sendData()
+        {
+            while (true)
+            {
+                if (isAuto)
+                {
+                    serialPort1.Write("OK");
+                    Thread.Sleep(100);
+                    //if (count == -10) count = 10;
+                    //count--;
+                    //serialPort1.Write("K" + count.ToString() + "\r\n");
+                    //Thread.Sleep(1000);
+                    //serialPort1.Write("B" + count.ToString() + "\r\n");
+                    //Thread.Sleep(1000);
+                    //serialPort1.Write("C\r\n");
+                    //Thread.Sleep(1000);
+                    //serialPort1.Write("N\r\n");
+                    //Thread.Sleep(1000);
+                }
             }
         }
     }
